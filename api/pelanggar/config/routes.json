@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pelanggars",
+      "handler": "Pelanggar.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pelanggars/count",
+      "handler": "Pelanggar.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pelanggars/:id",
+      "handler": "Pelanggar.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pelanggars",
+      "handler": "Pelanggar.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pelanggars/:id",
+      "handler": "Pelanggar.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pelanggars/:id",
+      "handler": "Pelanggar.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

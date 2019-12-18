@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "pelanggars",
+  "info": {
+    "name": "pelanggar",
+    "description": "master data pelanggar"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Denda": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "InvoiceNumber": {
+      "model": "invoice",
+      "via": "IdPelanggar"
+    }
+  }
+}

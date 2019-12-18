@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "invoices",
+  "info": {
+    "name": "invoice",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "IdPelanggar": {
+      "model": "pelanggar",
+      "via": "InvoiceNumber"
+    },
+    "TotalBayar": {
+      "type": "biginteger"
+    },
+    "InvoiceNumber": {
+      "unique": true,
+      "type": "string"
+    }
+  }
+}

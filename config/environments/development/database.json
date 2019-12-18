@@ -1,0 +1,27 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-bookshelf",
+      "settings": {
+        "client": "mysql",
+        "database": "invoice",
+        "host": "127.0.0.1",
+        "port": 3306,
+        "username": "root",
+        "password": "password",
+        "ssl": false
+      },
+      "options": {
+        "debug": true,
+        "pool": {
+          "min": 0,
+          "max": 10,
+          "idleTimeoutMillis": 30000,
+          "createTimeoutMillis": 30000,
+          "acquireTimeoutMillis": 30000
+        }
+      }
+    }
+  }
+}
