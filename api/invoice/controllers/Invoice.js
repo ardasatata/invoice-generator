@@ -41,6 +41,7 @@ module.exports = {
       entity.Denda
     );
 
-    return sanitizeEntity(invoice, { model: strapi.models.invoice });
+    // return sanitizeEntity(invoice, { model: strapi.models.invoice });
+    return invoice;
   }
 };

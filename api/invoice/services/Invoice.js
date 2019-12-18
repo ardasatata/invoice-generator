@@ -11,17 +11,44 @@ module.exports = {
 
     let date = moment().format('DDMMYYYY').toString()
 
-    let Total = Denda + ( Denda * 0.1 )
+    let Total = parseInt(Denda) + ( parseInt(Denda) * 0.1 )
 
     let InvoiceNumber = date + '-' + IdPelanggar
     console.log(InvoiceNumber)
 
-    strapi.query('invoice').findOne(params, populate);
+    let find = await strapi.query('invoice').findOne({ IdPelanggar })
 
-    return strapi.query('invoice').create({
-      TotalBayar : Total,
-      InvoiceNumber,
-      IdPelanggar
-    });
+    // console.log(find)
+    // console.log(find.id)
+    //
+    // return find
+
+    if(find){
+      return strapi.query('invoice').update(
+        {
+          id : find.id
+        },
+        {
+          TotalBayar : Total,
+          InvoiceNumber,
+          IdPelanggar
+        }
+      );
+    } else {
+      return strapi.query('invoice').create({
+        TotalBayar : Total,
+        InvoiceNumber,
+        IdPelanggar
+      });
+    }
+
+    // console.log(strapi.query('invoice').find({ IdPelanggar }))
+    // return strapi.query('invoice').findOne({ IdPelanggar })
+
+    // return strapi.query('invoice').create({
+    //   TotalBayar : Total,
+    //   InvoiceNumber,
+    //   IdPelanggar
+    // });
   },
 };
