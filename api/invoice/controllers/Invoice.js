@@ -29,10 +29,8 @@ module.exports = {
     );
     return sanitizeEntity(entity, { model: strapi.models.invoice });
   },
-
   async generate(ctx) {
     console.log('generate controller')
-    console.log(ctx)
 
     const entity = await strapi.services.pelanggar.findOne(ctx.params);
 

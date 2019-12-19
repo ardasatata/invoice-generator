@@ -47,6 +47,30 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/pelanggars/import",
+      "handler": "Pelanggar.bulkImport",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pelanggars/generate/invoice",
+      "handler": "Pelanggar.generateAllInvoice",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pelanggars/send/invoice/:id",
+      "handler": "Pelanggar.sendInvoice",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

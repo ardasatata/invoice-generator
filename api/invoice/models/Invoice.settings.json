@@ -14,16 +14,15 @@
     "comment": ""
   },
   "attributes": {
-    "IdPelanggar": {
-      "model": "pelanggar",
-      "via": "InvoiceNumber"
-    },
     "TotalBayar": {
       "type": "biginteger"
     },
     "InvoiceNumber": {
-      "unique": true,
       "type": "string"
+    },
+    "IdPelanggar": {
+      "model": "pelanggar",
+      "via": "InvoiceNumber"
     }
   }
 }

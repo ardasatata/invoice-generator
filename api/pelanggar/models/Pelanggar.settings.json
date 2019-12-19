@@ -15,7 +15,8 @@
   },
   "attributes": {
     "Name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Denda": {
       "type": "biginteger",
