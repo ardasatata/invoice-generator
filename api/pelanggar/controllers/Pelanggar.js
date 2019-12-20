@@ -50,7 +50,7 @@ module.exports = {
       'bayar@polri.go.id',
       'test@email.com',
       'Saudara ' + entity.Name + ' Anda memiliki denda yang belum dibayarkan',
-      'Total denda yang harus dibayarkan : ' +text
+      'Total denda yang harus dibayarkan : ' +text+' \nNomor Invoice anda adalah ' + entity.InvoiceNumber.InvoiceNumber
     );
     return send;
   }
